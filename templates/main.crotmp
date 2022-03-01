@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head />
+  <body>
+    <div>
+    <!.logged-in>
+      <a href="/oauth">Login</a>
+    </!>
+    <?.logged-in>
+      Welcome, <.user.name> | <a href="/post">New Post</a>
+    </?>
+    </div>
+    <h2>Posts</h2>
+    <@.posts:$p>
+    <div>
+      ° <a href="/view/<$p.id>"><$p.title></a>
+    </@>
+  </body>
+</html>

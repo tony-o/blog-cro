@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/demo.css" />
+  </head>
+  <body>
+    <h2><.post.title></h2>
+    <pre>
+      <.post.body>
+    </pre>
+    <@.levels:$l>
+      <div>
+        <&HTML($l.level)>&gt; <a href="/view/<$l.id>"><$l.title></a>
+      </div>
+    </@>
+
+    
+    <?.logged-in>
+      <@.response.errors: $err>
+        <div>Error: <$err></div>
+      </@>
+      <form method="POST" action="/view/<.post.id>">
+        <div><input type="text" name="title" placeholder="Response Title" value="<.response.title>" /></div>
+        <div><textarea name="body" cols="40" rows="20"><.response.body></textarea></div>
+        <div><input type="submit" value="Post" /></div>
+      </form>
+    </?>
+  </body>
+</html>

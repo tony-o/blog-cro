@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/demo.css" />
+  </head>
+  <body>
+    <@errors: $err>
+    <div>Error: <$err></div>
+    </@>
+    <form method="POST" action="/post">
+      <div><input type="text" name="title" placeholder="Post Title" value="<.title>" /></div>
+      <div><textarea name="body" cols="40" rows="20"><.body></textarea></div>
+      <div><input type="submit" value="Post" /></div>
+    </form>
+  </body>
+</html>

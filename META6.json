@@ -1,0 +1,13 @@
+{
+  "name":        "Demo",
+  "auth":        "zef:tony-o",
+  "version":     "0.0.1",
+  "api":         "0",
+  "description": "A demo cro app",
+  "depends":     ["cro", "Cro::WebApp::Template", "HTTP::Tinyish", "DB::SQLite", "UUID"],
+  "provides":    {
+    "Demo::App": "lib/Demo/App.rakumod",
+    "Config":    "lib/Config.rakumod"
+  },
+  "resources":  [ "db.sqlite" ]
+}
